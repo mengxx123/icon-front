@@ -1,1 +1,173 @@
-// TODO
+@import "var";
+
+a {
+    color: inherit;
+}
+.container {
+    width: 1160px!important;
+    margin: 0 auto;
+}
+.page-header {
+    height: 55px;
+    margin-bottom: 4px;
+    background-color: #06060b;
+    .nav-list {
+        display: flex;
+        align-items: center;
+        .item {
+
+        }
+        .link {
+            display: block;
+            //padding: 0 8px;
+            color: rgba(255,255,255,.5);
+        }
+    }
+}
+.page-footer {
+    background: rgba(6,6,11,.2);
+    height: 270px;
+    padding: 48px 0;
+    background: #06060b;
+    color: #60606d;
+    position: relative;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .left {
+        width: 636px;
+        .title {
+            margin-bottom: 28px;
+        }
+        .content {
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+    }
+    .right {
+        width: 380px;
+        .title {
+            margin-bottom: 28px;
+            font-size: 18px;
+        }
+        .link {
+            margin-right: 16px;
+        }
+    }
+}
+.banner {
+    background: #090723;
+    width: 100%;
+    height: 205px;
+    padding-top: 55px;
+    overflow: hidden;
+}
+
+.collection-item {
+    margin: 20px 33px 20px 12px;
+    width: 332px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        transform: translateY(-2%);
+        box-shadow: 1px 4px 10px 2px #CCC;
+    }
+    .link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .icon-list {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            margin-top: 14px;
+            margin-left: 11px;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            line-height: 50px;
+            color: #666;
+            float: left;
+        }
+        .icon {
+            font-size: 25px;
+        }
+    }
+}
+
+.main-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        margin: 15px 13px;
+        width: 100px;
+        height: 105px;
+        text-align: center;
+        position: relative;
+        overflow: visible;
+        border: 1px dashed transparent;
+        border-radius: 5px;
+        &:hover {
+            .mask {
+                display: block;
+            }
+        }
+    }
+    .icon {
+        font-size: 36px;
+        margin-top: 18px;
+        max-width: 100%;
+    }
+    .name {
+        display: block;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        color: #666;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .mask {
+        width: 100%;
+        height: 100%;
+        background: rgba(13,10,49,.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        overflow: hidden;
+        vertical-align: middle;
+        border-radius: 5px;
+    }
+    .cover-item {
+        width: 50%;
+        height: 52.5px;
+        line-height: 52.5px;
+        text-align: center;
+        color: #fff;
+        font-size: 22px;
+        display: inline-block;
+        cursor: pointer;
+        &:hover {
+            background: #0d0a31;
+            color: red;
+        }
+    }
+    .cover-item-line {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+    }
+}

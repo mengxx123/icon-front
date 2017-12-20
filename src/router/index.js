@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
 const About = resolve => require(['@/views/About'], resolve)
+const CollectionDetail = resolve => require(['@/views/CollectionDetail'], resolve)
 
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
@@ -23,6 +24,13 @@ let routes = [
         component: About,
         meta: {
             title: '关于'
+        }
+    },
+    {
+        path: '/collections/:id',
+        component: CollectionDetail,
+        meta: {
+            title: '图标库详情'
         }
     },
     {
