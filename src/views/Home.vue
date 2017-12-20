@@ -3,7 +3,7 @@
         <ui-header></ui-header>
         <main class="page-body">
             <div class="container">
-                图标
+                图标下载 编辑 分享
                 <router-link to="/about">关于</router-link>
             </div>
         </main>
