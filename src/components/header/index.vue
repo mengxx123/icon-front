@@ -3,7 +3,7 @@
         <div class="container">
             <ul class="nav-list">
                 <li class="item active">
-                    <router-link class="link" to="/home/index">首页</router-link>
+                    <router-link class="link" to="/">首页</router-link>
                 </li>
                 <li class="item">
                     <router-link class="link" to="/collections/index">图标库</router-link>

@@ -4,12 +4,11 @@ a {
     color: inherit;
 }
 .container {
-    width: 1160px!important;
+    width: 1180px!important;
     margin: 0 auto;
 }
 .page-header {
     height: 55px;
-    margin-bottom: 4px;
     background-color: #06060b;
     .nav-list {
         display: flex;
@@ -26,7 +25,6 @@ a {
 }
 .page-footer {
     background: rgba(6,6,11,.2);
-    height: 270px;
     padding: 48px 0;
     background: #06060b;
     color: #60606d;
@@ -62,6 +60,18 @@ a {
     height: 205px;
     padding-top: 55px;
     overflow: hidden;
+    .title {
+        font-size: 22px;
+        color: #fff;
+        line-height: 22px;
+    }
+    .info {
+        font-size: 12px;
+        color: #a6a5ad;
+        display: block;
+        line-height: 14px;
+        margin-top: 15px;
+    }
 }
 
 .collection-item {
@@ -115,6 +125,12 @@ a {
         overflow: visible;
         border: 1px dashed transparent;
         border-radius: 5px;
+        &.selected {
+            border-color: #60606d;
+            .icon-cart {
+                color: red;
+            }
+        }
         &:hover {
             .mask {
                 display: block;
@@ -170,4 +186,107 @@ a {
         height: 35px;
         line-height: 35px;
     }
+}
+.button {
+    border: none;
+}
+.cart-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(13, 10, 49, .8);
+    .dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: #fff;
+    }
+    .header {
+        position: relative;
+        height: 56px;
+        background: #0a0f30;
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            background: red;
+        }
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 198px;
+        background: #f3f3f3;
+        .btn {
+            display: block;
+            width: 164px;
+            margin: 16px auto 25px;
+            border-radius: 40px;
+        }
+    }
+}
+.btn-large {
+    height: 36px;
+    line-height: 34px;
+    font-size: 14px;
+}
+.btn-normal {
+    color: #333;
+    background-color: #ddd;
+    &:hover {
+        background-color: red;
+        color: #fff;
+    }
+}
+.cart-list {
+    display: flex;
+    padding: 0 12px;
+    flex-wrap: wrap;
+    .item {
+        position: relative;
+        width: 60px;
+        height: 65px;
+        margin: 7px 4px 10px;
+        cursor: pointer;
+        &:hover {
+            .mask {
+                display: block;
+            }
+        }
+    }
+    .icon {
+        font-size: 26px;
+        margin-top: 11px;
+    }
+    .name {
+        font-size: 12px;
+        width: 100%;
+        margin-top: 6px;
+        color: #666;
+    }
+    .mask {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(13,10,49,.9);
+        ._icon {
+            color: #fff;
+            line-height: 64px;
+        }
+    }
+}
+._icon {
+    font-size: inherit;
+    font-style: normal;
 }
