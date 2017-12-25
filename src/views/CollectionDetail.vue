@@ -6,21 +6,21 @@
                 <div class="avatar-box">
 
                 </div>
-                <div>
-                    <h1 class="title">Rookie 3.0官方图标库</h1>
-                    <div class="info">178 icons</div>
+                <div v-if="collection">
+                    <h1 class="title">{{ collection.name }}</h1>
+                    <div class="info">{{ collection.items.length }} icons</div>
                     <div class="info">粟三</div>
                 </div>
             </div>
         </div>
         <main class="page-body">
             <div class="container">
-                <ul class="main-icon-list">
-                    <li class="item" v-for="icon in icons" :class="{selected: isSelected(icon)}">
-                        <div v-html="icon.content"></div>
-                        <div class="name">{{ icon.name }}</div>
+                <ul class="main-icon-list" v-if="collection">
+                    <li class="item" v-for="item in collection.items" :class="{selected: isSelected(item.Icon)}">
+                        <div v-html="item.Icon.content"></div>
+                        <div class="name">{{ item.Icon.name }}</div>
                         <div class="mask">
-                            <div class="cover-item _icon cover-item-line icon-cart" title="添加入库" @click="addToCart(icon)"></div>
+                            <div class="cover-item _icon cover-item-line icon-cart" title="添加入库" @click="addToCart(item.Icon)"></div>
                             <div class="cover-item _icon cover-item-line icon-star" title="收藏"></div>
                             <div class="cover-item _icon cover-item-line icon-download" title="下载图标"></div>
                         </div>
@@ -58,6 +58,7 @@
         data () {
             return {
                 cartVisible: false,
+                collection: {},
                 icons: [],
                 carts: [{
                         id: '1'
@@ -91,11 +92,12 @@
                 this.cartVisible = false
             },
             init() {
-                this.$http.get('/icons')
+                let id = this.$route.params.id
+                this.$http.get('/collections/' + id)
                     .then(response => {
                         let data = response.data
                         console.log(data)
-                        this.icons = data
+                        this.collection = data
                     },
                     response => {
                         console.log(response)
