@@ -73,7 +73,26 @@ a {
         margin-top: 15px;
     }
 }
-
+.collection-box {
+    background: #090723;
+    width: 320px;
+    height: 205px;
+    margin-bottom: 16px;
+    padding-top: 55px;
+    overflow: hidden;
+    .title {
+        font-size: 22px;
+        color: #fff;
+        line-height: 22px;
+    }
+    .info {
+        font-size: 12px;
+        color: #a6a5ad;
+        display: block;
+        line-height: 14px;
+        margin-top: 15px;
+    }
+}
 .collection-item {
     margin: 20px 33px 20px 12px;
     width: 332px;
@@ -190,21 +209,21 @@ a {
 .button {
     border: none;
 }
-.cart-box {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(13, 10, 49, .8);
-    .dialog {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        background-color: #fff;
+.download-box {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    text-align: center;
+    .icon {
+        //width: 100px !important;
+        //height: 100px !important;
     }
+}
+.cart-box {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    //padding: 24px;
     .header {
         position: relative;
         height: 56px;
@@ -232,6 +251,32 @@ a {
             border-radius: 40px;
         }
     }
+    .cart-empty {
+        padding-top: 40px;
+        text-align: center;
+        color: #666;
+        img {
+            width: 160px;
+            margin-bottom: 16px;
+        }
+    }
+}
+.cart-box2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(13, 10, 49, .8);
+    .dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: #fff;
+    }
+
 }
 .btn-large {
     height: 36px;
@@ -289,4 +334,16 @@ a {
 ._icon {
     font-size: inherit;
     font-style: normal;
+}
+
+.my-float-button {
+    position: fixed;
+    bottom: 32px;
+    right: 16px;
+}
+.btn-feedback {
+
+}
+.btn-add {
+    bottom: 128px;
 }
