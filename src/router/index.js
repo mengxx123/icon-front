@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
+const Spec = resolve => require(['@/views/Spec'], resolve)
+const SpecHelp = resolve => require(['@/views/SpecHelp'], resolve)
 const About = resolve => require(['@/views/About'], resolve)
 const Help = resolve => require(['@/views/Help'], resolve)
 const All = resolve => require(['@/views/All'], resolve)
@@ -18,6 +20,14 @@ let routes = [
     {
         path: '/home',
         component: Home
+    },
+    {
+        path: '/spec',
+        component: Spec
+    },
+    {
+        path: '/spec/help',
+        component: SpecHelp
     },
     {
         path: '/help',

@@ -1,10 +1,13 @@
 <template>
-    <ui-page :title="title || page.title" :page="page" ref="page"
+    <ui-page :title="title || page.title" :page="page" :backable="backable" ref="page"
              :containerMaxWidth="containerMaxWidth" :padding="false">
         <div slot="drawer">
             <ui-appbar title=""></ui-appbar>
             <ui-list @itemClick="toggle()">
                 <ui-list-item title="首页" to="/">
+                    <ui-icon value="home" slot="left" />
+                </ui-list-item>
+                <ui-list-item title="图标规范工具" to="/spec">
                     <ui-icon value="home" slot="left" />
                 </ui-list-item>
                 <!--<ui-list-item title="图标库" to="/all">-->
