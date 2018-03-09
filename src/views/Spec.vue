@@ -9,6 +9,20 @@
             <img class="template" src="/static/img/template.svg"/>
             <img class="logo" :src="resultSrc" v-if="resultSrc" />
         </div>
+        <div class="section">
+            <h2 class="section-title">模板下载</h2>
+            <ul class="download-list">
+                <li class="item">
+                    <div class="head">
+                        <ui-icon class="icon" value="file_download" />
+                    </div>
+                    <a href="/static/res/Google_MD_Icon_Grid.ai" class="info">
+                        <div class="title">模板</div>
+                        <div>379 KB (.ai)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </my-page>
 </template>
 
@@ -61,6 +75,7 @@
         width: 100%;
         max-width: 800px;
         max-height: 800px;
+        margin-bottom: 24px;
         box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
         .template {
             position: relative;
@@ -72,6 +87,40 @@
             top: 0;
             width: 100%;
             height: 100%;
+        }
+    }
+    .section {
+        /*background-color: #999;*/
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+    }
+    .download-list {
+        .item {
+            width: 360px;
+            margin-bottom: 16px;
+            background-color: #eee;
+            border: 1px solid #eee;
+        }
+        .head {
+            display: flex;
+            width: 56px;
+            height: 80px;
+            justify-content: center;
+            align-items: center;
+            float: left;
+        }
+        .info {
+            display: block;
+            background-color: #fff;
+            font-size: 13px;
+            line-height: 24px;
+            margin-left: 56px;
+            padding: 16px;
+        }
+        .icon {
+            color: #666;
         }
     }
 </style>
