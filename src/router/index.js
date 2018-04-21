@@ -6,6 +6,7 @@ const About = resolve => require(['@/views/About'], resolve)
 const Help = resolve => require(['@/views/Help'], resolve)
 const All = resolve => require(['@/views/All'], resolve)
 const CollectionDetail = resolve => require(['@/views/CollectionDetail'], resolve)
+const MaterialDesign = resolve => require(['@/views/MaterialDesign'], resolve)
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
 Vue.use(Router)
@@ -30,6 +31,10 @@ let routes = [
     {
         path: '/about',
         component: About
+    },
+    {
+        path: '/md',
+        component: MaterialDesign
     },
     {
         path: '/collections/:id',

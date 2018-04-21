@@ -7,6 +7,9 @@
                 <ui-list-item title="首页" to="/">
                     <ui-icon value="home" slot="left" />
                 </ui-list-item>
+                <ui-list-item title="Material Design 图标" to="/md">
+                    <ui-icon value="home" slot="left" />
+                </ui-list-item>
                 <!--<ui-list-item title="图标库" to="/all">-->
                     <!--<ui-icon value="home" slot="left" />-->
                 <!--</ui-list-item>-->
