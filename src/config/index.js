@@ -1,8 +1,8 @@
 let apiDomain
 if (process.env.NODE_ENV === 'production') {
-    apiDomain = 'http://api.font.yunser.com'
+    apiDomain = 'http://apifont.yunser.com'
 } else {
-    apiDomain = 'http://api.font.yunser.com'
+    apiDomain = 'http://apifont.yunser.com'
     // apiDomain = 'http://localhost:1027'
 }
 
