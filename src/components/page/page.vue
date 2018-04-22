@@ -1,5 +1,5 @@
 <template>
-    <ui-page :title="title || page.title" :page="page" ref="page"
+    <ui-page :title="title || page.title" :page="page" :backable="backable" ref="page"
              :containerMaxWidth="containerMaxWidth" :padding="false">
         <div slot="drawer">
             <ui-appbar title=""></ui-appbar>
@@ -8,7 +8,10 @@
                     <ui-icon value="home" slot="left" />
                 </ui-list-item>
                 <ui-list-item title="Material Design 图标" to="/md">
-                    <ui-icon value="home" slot="left" />
+                    <ui-icon value="star" slot="left" />
+                </ui-list-item>
+                <ui-list-item title="图标规范工具" to="/spec">
+                    <ui-icon value="star" slot="left" />
                 </ui-list-item>
                 <!--<ui-list-item title="图标库" to="/all">-->
                     <!--<ui-icon value="home" slot="left" />-->

@@ -1,5 +1,6 @@
 <template>
-    <my-page title="关于">
+    <my-page title="Material Design 图标">
+        开发中
     </my-page>
 </template>
 
