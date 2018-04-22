@@ -46,6 +46,7 @@
         },
         methods: {
             init() {
+                this.initWebIntents()
                 this.$http.get('/download/all.json')
                     .then(response => {
                         this.icons = response.data.data
@@ -55,9 +56,38 @@
                         console.log(response)
                     })
             },
+            initWebIntents() {
+                // if (!window.intent) {
+                //     return
+                // }
+                // console.log(window.intent.data)
+                // let data = window.intent.data
+                // this.editor.setValue(data)
+
+                // this.page.menu.push({
+                //     type: 'icon',
+                //     icon: 'check',
+                //     click: this.finish,
+                //     title: '完成'
+                // })
+            },
             downloadIcon(icon) {
-                this.dlIcon = icon
-                this.downloadVisible = true
+                if (window.intent) {
+                    this.dlIcon = icon
+                    let head = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">'
+                    let content = head + this.dlIcon.content
+                    svgUtil.svgToDataUrl(content, dataUrl => {
+                        console.log(dataUrl)
+                        window.intent.postResult(dataUrl)
+                        setTimeout(() => {
+                            let owner = window.opener || window.parent
+                            owner.window.close()
+                        }, 100)
+                    })
+                } else {
+                    this.dlIcon = icon
+                    this.downloadVisible = true
+                }
             },
             closeDownload() {
                 this.downloadVisible = false

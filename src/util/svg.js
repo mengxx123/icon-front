@@ -31,6 +31,31 @@ window.toUTF8 = function (str) {
 }
 
 let svg = {
+    svgToDataUrl(html, callback) {
+        console.log(html)
+        html = window.toUTF8(html)
+        let imgSrc = 'data:image/svg+xml;base64,' + btoa(html)
+
+        console.log(imgSrc)
+        // let canvas = document.createElement('CANVAS')
+        let canvas = document.getElementById('canvas')
+        console.log(canvas)
+        canvas.width = 1024 // TODO 写死
+        canvas.height = 1024
+
+        // 加载图片并绘制到画布
+        let img = new Image()
+        img.onload = function () {
+            let myctx = canvas.getContext('2d')
+            myctx.width = 1024
+            myctx.height = 1024
+            myctx.drawImage(img, 0, 0, 1024, 1024, 0, 0, 1024, 1024)
+            let dataUrl = canvas.toDataURL()
+            callback && callback(dataUrl)
+        }
+        img.src = imgSrc
+    },
+
     download(html) {
         console.log(html)
         html = window.toUTF8(html)

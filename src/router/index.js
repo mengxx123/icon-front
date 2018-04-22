@@ -17,6 +17,10 @@ let routes = [
         component: All
     },
     {
+        path: '/pick',
+        component: All
+    },
+    {
         path: '/home',
         component: Home
     },
