@@ -2,16 +2,12 @@
     <ui-page :title="title || page.title" :page="page" :backable="backable" ref="page"
              :containerMaxWidth="containerMaxWidth" :padding="false">
         <div slot="drawer">
-            <ui-appbar title=""></ui-appbar>
+            <div class="header">
+                <img class="logo" src="/static/img/icon.svg">
+            </div>
             <ui-list @itemClick="toggle()">
                 <ui-list-item title="首页" to="/">
                     <ui-icon value="home" slot="left" />
-                </ui-list-item>
-                <ui-list-item title="Material Design 图标" to="/md">
-                    <ui-icon value="star" slot="left" />
-                </ui-list-item>
-                <ui-list-item title="图标规范工具" to="/spec">
-                    <ui-icon value="star" slot="left" />
                 </ui-list-item>
                 <!--<ui-list-item title="图标库" to="/all">-->
                     <!--<ui-icon value="home" slot="left" />-->
@@ -33,9 +29,6 @@
                 <!--<ui-list-item title="我的收藏" to="/like">-->
                     <!--<ui-icon value="star" slot="left" />-->
                 <!--</ui-list-item>-->
-                <ui-divider />
-            </ui-list>
-            <ui-list class="cart-box" @itemClick="toggle()">
                 <!--<ui-list-item title="友情链接" to="/links">-->
                     <!--<ui-icon value="link" slot="left" />-->
                 <!--</ui-list-item>-->
@@ -99,4 +92,19 @@
 </script>
 
 <style lang="scss" scoped>
+.header {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.logo {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+.ui-position-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 </style>

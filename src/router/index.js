@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
+const Home2 = resolve => require(['@/views/Home2'], resolve)
 const Spec = resolve => require(['@/views/Spec'], resolve)
 const SpecHelp = resolve => require(['@/views/SpecHelp'], resolve)
 const About = resolve => require(['@/views/About'], resolve)
@@ -16,6 +17,10 @@ Vue.use(Router)
 let routes = [
     {
         path: '/',
+        component: Home
+    },
+    {
+        path: '/download',
         component: All
     },
     {
@@ -24,7 +29,7 @@ let routes = [
     },
     {
         path: '/home',
-        component: Home
+        component: Home2
     },
     {
         path: '/spec',

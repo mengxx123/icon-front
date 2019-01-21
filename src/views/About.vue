@@ -1,5 +1,5 @@
 <template>
-    <my-page title="关于">
+    <my-page title="关于" backable>
         <ui-article>
             <h2>关于</h2>
             <p>Icon+，一个矢量图标管理、交流平台。基于 <a href="http://iconfont.cn" target="_blank">Iconfont</a>，为团队提供私有图标库解决方案。</p>
