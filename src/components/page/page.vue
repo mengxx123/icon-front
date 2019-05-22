@@ -38,7 +38,10 @@
                 <!--<ui-list-item title="帮助" to="/help">-->
                     <!--<ui-icon value="info" slot="left" />-->
                 <!--</ui-list-item>-->
-                <ui-list-item title="关于" to="/about">
+                <!-- <ui-list-item title="关于" to="/about">
+                    <ui-icon value="info" slot="left" />
+                </ui-list-item> -->
+                <ui-list-item title="关于" href="https://project.yunser.com/products/69b270001da211e980ddc3b4a1e211c2" target="_blank">
                     <ui-icon value="info" slot="left" />
                 </ui-list-item>
             </ui-list>
